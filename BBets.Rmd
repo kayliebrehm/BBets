@@ -125,22 +125,20 @@ print(mean(saveBank))
 hist(saveBank)
 ```
 
-His profit would be 
+```{r}
+saveBank <- vector("numeric")
+for(i in 1: 40){
+  saveBank [i] <- BrLw(numClass = 35, odds = 2, countoDo = 637)
+}
+favstats(saveBank)
+lcl <- mean(saveBank) - 2*sd(saveBank)
+ucl <- mean(saveBank) + 2*sd(saveBank)
+options(digits = 1)                                
+print(paste(lcl, ucl))
+```
 
- 
+His mean earnings would be about `r mean(saveBank) `. The standard deviation would be about `r sd(saveBank)`. The 95 percent interval would be lcl at about `r lcl` and ucl at about `r ucl`. 
 
-## Analysis 
-
-
-### Average Earnings
-
-### Standard deviation and 95% confidence interval for their earnings?
-  
-<!--Explain and display your method of coming up with a 95% confidence interval of professor Brownlows winnings (or losings)-->
-
-
-
-the 95% CI is mean(saveBank) +/- 2*sd(saveBank)
 
 # Discussion and Conclusion
 
