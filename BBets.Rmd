@@ -24,17 +24,19 @@ source(file="BrLw.R")
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
- At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
+At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far.
  
-Report git commit structure:
-There are 3 questions and there should be at least 3 separate commits, at least one dealing with each of the 3 questions.
+
 1. What are the fair odds for a bet on matching birthdays in a 35 person class.
+
 2. For what size class is a 2:1 odds bet fair.
+
 3. How much money would Brownlow be expected to end up with if the bets went as described.
+
 
 # Method
 
-We will build a function and adjust the odds ratio or class size to answer the three questions. 
+We will build a function and adjust the odds ratio or class size to answer the three questions. I will also create a numerical data chart and calculate the lcl and ucl to answer the final question.
 
 # Data
 
@@ -65,7 +67,7 @@ hist(saveBank)
 ```
 
 
-## Question 1- fair odds
+## Question 1
 
 
 ```{r}
@@ -87,7 +89,7 @@ hist(saveBank)
 
 Dr Brownlow should pay `r mean(saveBank) ` to make the game fair for a class size of 35.
 
-## Question 2- 2:1 odds Bet
+## Question 2
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
@@ -108,7 +110,7 @@ hist(saveBank)
 
 If he pays out 2:1, then the class size should be about `r numClass`
 
-## Question 3- Bets as described
+## Question 3
 
 ```{r}
 numClass = 35
@@ -143,4 +145,6 @@ His mean earnings would be about `r mean(saveBank) `. The standard deviation wou
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+
+The fair odds for a bet on matching birthdays in a 35 person class would be about 4.35. Adjusting it to either 4 or 5 would have professor Brownlow's profit not centered on zero. For a 2:1 odds bet fair, the class size should be about 28 or 29. Adjusting it to 27 or 30 would make his profits not center near zero. They would be skewed. If the bets went as expected Brownlow could expect between 230 and 350. It is more probable that his winnings are around 280 or 290, as that is where his mean lies. 
 
